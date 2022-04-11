@@ -1,70 +1,71 @@
+// Copyright 2010, Shuo Chen.  All rights reserved.
+// http://code.google.com/p/muduo/
+//
+// Use of this source code is governed by a BSD-style license
+// that can be found in the License file.
+
+// Author: Shuo Chen (chenshuo at chenshuo dot com)
+//
+// This is an internal header file, you should not include this.
+
 #ifndef MUDUO_NET_POLLER_H
 #define MUDUO_NET_POLLER_H
 
-/*
-poller 是 EventLoop 的间接成员,只供其 owner EventLoop 在 IO 线程内调用,因此无需加锁.
-其生命值与 EventLoop 相等.
-*/
 #include <map>
 #include <vector>
 
 #include "../base/Timestamp.h"
 #include "EventLoop.h"
 
-
-#include <vector>
-#include <map>
-
-struct poller;
-
 namespace muduo
 {
-    namespace net
-    {
-        class Channel;
+namespace net
+{
 
-        class Poller
-        {
-            public:
-                typedef std::vector<Channel*> ChannelList;
-                Poller(EventLoop* loop);
-                virtual ~Poller();
+class Channel;
 
-                /// Polls the I/O events.
-                /// Must be called in the loop thread.
-                virtual Timestamp poll(int timeoutMs, ChannelList* activeChannels) = 0;
+///
+/// Base class for IO Multiplexing
+///
+/// This class doesn't own the Channel objects.
+class Poller : noncopyable
+{
+ public:
+  typedef std::vector<Channel*> ChannelList;
 
-                /// Changes the interested I/O events.
-                /// Must be called in the loop thread.
-                virtual void updateChannel(Channel* channel) = 0;
+  Poller(EventLoop* loop);
+  virtual ~Poller();
 
-                /// Remove the channel, when it destructs.
-                /// Must be called in the loop thread.
-                virtual void removeChannel(Channel* channel) = 0;
+  /// Polls the I/O events.
+  /// Must be called in the loop thread.
+  virtual Timestamp poll(int timeoutMs, ChannelList* activeChannels) = 0;
 
-                virtual bool hasChannel(Channel* channel) const;
+  /// Changes the interested I/O events.
+  /// Must be called in the loop thread.
+  virtual void updateChannel(Channel* channel) = 0;
 
-                static Poller* newDefaultPoller(EventLoop* loop);
+  /// Remove the channel, when it destructs.
+  /// Must be called in the loop thread.
+  virtual void removeChannel(Channel* channel) = 0;
 
-                void assertInLoopThread() const
-                {
-                    ownerloop_->assertInLoopThread();
-                }
-            private:
-                EventLoop* ownerloop_;
+  virtual bool hasChannel(Channel* channel) const;
 
-            protected:
-                typedef std::map<int, Channel*> ChannelMap;
-                ChannelMap channels_;
-                
-                
-        };
-    
-        
-    }
-}
+  static Poller* newDefaultPoller(EventLoop* loop);
 
+  void assertInLoopThread() const
+  {
+    ownerLoop_->assertInLoopThread();
+  }
 
+ protected:
+  typedef std::map<int, Channel*> ChannelMap;
+  ChannelMap channels_;
 
+ private:
+  EventLoop* ownerLoop_;
+};
 
-#endif
+}  // namespace net
+}  // namespace muduo
+
+#endif  // MUDUO_NET_POLLER_H

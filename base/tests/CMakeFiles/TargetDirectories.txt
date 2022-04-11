@@ -1,0 +1,5 @@
+/home/erfenjiao/MUDUO/base/tests/CMakeFiles/rebuild_cache.dir
+/home/erfenjiao/MUDUO/base/tests/CMakeFiles/fileutil_test.dir
+/home/erfenjiao/MUDUO/base/tests/CMakeFiles/asynclogging_test.dir
+/home/erfenjiao/MUDUO/base/tests/CMakeFiles/edit_cache.dir
+/home/erfenjiao/MUDUO/base/tests/CMakeFiles/Atomic_test.dir
