@@ -2,12 +2,18 @@
 #define MUDUO_BASE_CURRENTTHREAD_H
 
 #include "Types.h"
+#include <signal.h>
+#include <unistd.h>
+
+#include "Logging.h"
 
 
 namespace muduo
 {
     namespace CurrentThread
     {
+
+
         // internal
         //线程真实pid缓存,如果每次都调用getpid()获得pid,效率较低
         extern __thread int t_cachedTid;  

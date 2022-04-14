@@ -1,7 +1,0 @@
-/home/erfenjiao/MUDUO/base/CMakeFiles/install/strip.dir
-/home/erfenjiao/MUDUO/base/CMakeFiles/edit_cache.dir
-/home/erfenjiao/MUDUO/base/CMakeFiles/muduo_base.dir
-/home/erfenjiao/MUDUO/base/CMakeFiles/rebuild_cache.dir
-/home/erfenjiao/MUDUO/base/CMakeFiles/list_install_components.dir
-/home/erfenjiao/MUDUO/base/CMakeFiles/install/local.dir
-/home/erfenjiao/MUDUO/base/CMakeFiles/install.dir

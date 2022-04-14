@@ -1,30 +1,71 @@
-set(http_SRCS
-  HttpServer.cc
-  HttpResponse.cc
-  HttpContext.cc
+cmake_minimum_required(VERSION 3.13)
+
+include(CheckFunctionExists)
+
+check_function_exists(accept4 HAVE_ACCEPT4)
+if(NOT HAVE_ACCEPT4)
+  set_source_files_properties(SocketsOps.cc PROPERTIES COMPILE_FLAGS "-DNO_ACCEPT4")
+endif()
+
+set(net_SRCS
+  Acceptor.cc
+  Buffer.cc
+  Channel.cc
+  Connector.cc
+  EventLoop.cc
+  EventLoopThread.cc
+  EventLoopThreadPool.cc
+  InetAddress.cc
+  Poller.cc
+  poller/DefaultPoller.cc
+  poller/EPollPoller.cc
+  poller/PollPoller.cc
+  Socket.cc
+  SocketsOps.cc
+  TcpClient.cc
+  TcpConnection.cc
+  TcpServer.cc
+  Timer.cc
+  TimerQueue.cc
   )
 
-add_library(muduo_http ${http_SRCS})
-target_link_libraries(muduo_http muduo_net)
+add_library(muduo_net ${net_SRCS})
+target_link_libraries(muduo_net muduo_base)
 
-install(TARGETS muduo_http DESTINATION lib)
+#add_library(muduo_net_cpp11 ${net_SRCS})
+#target_link_libraries(muduo_net_cpp11 muduo_base_cpp11)
+#set_target_properties(muduo_net_cpp11 PROPERTIES COMPILE_FLAGS "-std=c++0x")
+
+install(TARGETS muduo_net DESTINATION lib)
+#install(TARGETS muduo_net_cpp11 DESTINATION lib)
+
 set(HEADERS
-  HttpContext.h
-  HttpRequest.h
-  HttpResponse.h
-  HttpServer.h
+  Buffer.h
+  Callbacks.h
+  Channel.h
+  Endian.h
+  EventLoop.h
+  EventLoopThread.h
+  EventLoopThreadPool.h
+  InetAddress.h
+  TcpClient.h
+  TcpConnection.h
+  TcpServer.h
+  TimerId.h
   )
-install(FILES ${HEADERS} DESTINATION include/muduo/net/http)
+install(FILES ${HEADERS} DESTINATION include/muduo/net)
+
+add_subdirectory(http)
+add_subdirectory(inspect)
 
 if(MUDUO_BUILD_EXAMPLES)
-add_executable(httpserver_test tests/HttpServer_test.cc)
-target_link_libraries(httpserver_test muduo_http)
-
-if(BOOSTTEST_LIBRARY)
-add_executable(httprequest_unittest tests/HttpRequest_unittest.cc)
-target_link_libraries(httprequest_unittest muduo_http boost_unit_test_framework)
+  add_subdirectory(tests)
 endif()
 
+if(PROTOBUF_FOUND)
+  add_subdirectory(protobuf)
+  add_subdirectory(protorpc)
+else()
+  add_subdirectory(protobuf EXCLUDE_FROM_ALL)
+  add_subdirectory(protorpc EXCLUDE_FROM_ALL)
 endif()
-
-# add_subdirectory(tests)

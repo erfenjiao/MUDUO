@@ -7,8 +7,8 @@
 // Author: Shuo Chen (chenshuo at chenshuo dot com)
 //
 
-#include "muduo/net/http/HttpResponse.h"
-#include "muduo/net/Buffer.h"
+#include "HttpResponse.h"
+#include "../Buffer.h"
 
 #include <stdio.h>
 

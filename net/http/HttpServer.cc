@@ -7,12 +7,12 @@
 // Author: Shuo Chen (chenshuo at chenshuo dot com)
 //
 
-#include "muduo/net/http/HttpServer.h"
+#include "HttpServer.h"
 
-#include "muduo/base/Logging.h"
-#include "muduo/net/http/HttpContext.h"
-#include "muduo/net/http/HttpRequest.h"
-#include "muduo/net/http/HttpResponse.h"
+#include "../../base/Logging.h"
+#include "HttpContext.h"
+#include "HttpRequest.h"
+#include "HttpResponse.h"
 
 using namespace muduo;
 using namespace muduo::net;
@@ -50,9 +50,9 @@ HttpServer::HttpServer(EventLoop* loop,
 
 void HttpServer::start()
 {
-  LOG_WARN << "HttpServer[" << server_.name()
-    << "] starts listenning on " << server_.ipPort();
-  server_.start();
+    LOG_WARN << "HttpServer[" << server_.name()
+      << "] starts listenning on " << server_.ipPort();
+    server_.start();
 }
 
 void HttpServer::onConnection(const TcpConnectionPtr& conn)

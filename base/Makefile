@@ -169,230 +169,410 @@ muduo_base/fast:
 	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/build
 .PHONY : muduo_base/fast
 
-# target to build an object file
-AsyncLogging.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/AsyncLogging.o
+AsyncLogging.o: AsyncLogging.cc.o
+
 .PHONY : AsyncLogging.o
 
-# target to preprocess a source file
-AsyncLogging.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/AsyncLogging.i
+# target to build an object file
+AsyncLogging.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/AsyncLogging.cc.o
+.PHONY : AsyncLogging.cc.o
+
+AsyncLogging.i: AsyncLogging.cc.i
+
 .PHONY : AsyncLogging.i
 
-# target to generate assembly for a file
-AsyncLogging.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/AsyncLogging.s
+# target to preprocess a source file
+AsyncLogging.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/AsyncLogging.cc.i
+.PHONY : AsyncLogging.cc.i
+
+AsyncLogging.s: AsyncLogging.cc.s
+
 .PHONY : AsyncLogging.s
 
-# target to build an object file
-Condition.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Condition.o
+# target to generate assembly for a file
+AsyncLogging.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/AsyncLogging.cc.s
+.PHONY : AsyncLogging.cc.s
+
+Condition.o: Condition.cc.o
+
 .PHONY : Condition.o
 
-# target to preprocess a source file
-Condition.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Condition.i
+# target to build an object file
+Condition.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Condition.cc.o
+.PHONY : Condition.cc.o
+
+Condition.i: Condition.cc.i
+
 .PHONY : Condition.i
 
-# target to generate assembly for a file
-Condition.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Condition.s
+# target to preprocess a source file
+Condition.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Condition.cc.i
+.PHONY : Condition.cc.i
+
+Condition.s: Condition.cc.s
+
 .PHONY : Condition.s
 
-# target to build an object file
-CountDownLatch.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CountDownLatch.o
+# target to generate assembly for a file
+Condition.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Condition.cc.s
+.PHONY : Condition.cc.s
+
+CountDownLatch.o: CountDownLatch.cc.o
+
 .PHONY : CountDownLatch.o
 
-# target to preprocess a source file
-CountDownLatch.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CountDownLatch.i
+# target to build an object file
+CountDownLatch.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CountDownLatch.cc.o
+.PHONY : CountDownLatch.cc.o
+
+CountDownLatch.i: CountDownLatch.cc.i
+
 .PHONY : CountDownLatch.i
 
-# target to generate assembly for a file
-CountDownLatch.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CountDownLatch.s
+# target to preprocess a source file
+CountDownLatch.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CountDownLatch.cc.i
+.PHONY : CountDownLatch.cc.i
+
+CountDownLatch.s: CountDownLatch.cc.s
+
 .PHONY : CountDownLatch.s
 
-# target to build an object file
-CurrentThread.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CurrentThread.o
+# target to generate assembly for a file
+CountDownLatch.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CountDownLatch.cc.s
+.PHONY : CountDownLatch.cc.s
+
+CurrentThread.o: CurrentThread.cc.o
+
 .PHONY : CurrentThread.o
 
-# target to preprocess a source file
-CurrentThread.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CurrentThread.i
+# target to build an object file
+CurrentThread.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CurrentThread.cc.o
+.PHONY : CurrentThread.cc.o
+
+CurrentThread.i: CurrentThread.cc.i
+
 .PHONY : CurrentThread.i
 
-# target to generate assembly for a file
-CurrentThread.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CurrentThread.s
+# target to preprocess a source file
+CurrentThread.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CurrentThread.cc.i
+.PHONY : CurrentThread.cc.i
+
+CurrentThread.s: CurrentThread.cc.s
+
 .PHONY : CurrentThread.s
 
-# target to build an object file
-Date.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Date.o
+# target to generate assembly for a file
+CurrentThread.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/CurrentThread.cc.s
+.PHONY : CurrentThread.cc.s
+
+Date.o: Date.cc.o
+
 .PHONY : Date.o
 
-# target to preprocess a source file
-Date.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Date.i
+# target to build an object file
+Date.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Date.cc.o
+.PHONY : Date.cc.o
+
+Date.i: Date.cc.i
+
 .PHONY : Date.i
 
-# target to generate assembly for a file
-Date.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Date.s
+# target to preprocess a source file
+Date.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Date.cc.i
+.PHONY : Date.cc.i
+
+Date.s: Date.cc.s
+
 .PHONY : Date.s
 
-# target to build an object file
-Exception.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Exception.o
+# target to generate assembly for a file
+Date.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Date.cc.s
+.PHONY : Date.cc.s
+
+Exception.o: Exception.cc.o
+
 .PHONY : Exception.o
 
-# target to preprocess a source file
-Exception.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Exception.i
+# target to build an object file
+Exception.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Exception.cc.o
+.PHONY : Exception.cc.o
+
+Exception.i: Exception.cc.i
+
 .PHONY : Exception.i
 
-# target to generate assembly for a file
-Exception.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Exception.s
+# target to preprocess a source file
+Exception.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Exception.cc.i
+.PHONY : Exception.cc.i
+
+Exception.s: Exception.cc.s
+
 .PHONY : Exception.s
 
-# target to build an object file
-FileUtil.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/FileUtil.o
+# target to generate assembly for a file
+Exception.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Exception.cc.s
+.PHONY : Exception.cc.s
+
+FileUtil.o: FileUtil.cc.o
+
 .PHONY : FileUtil.o
 
-# target to preprocess a source file
-FileUtil.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/FileUtil.i
+# target to build an object file
+FileUtil.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/FileUtil.cc.o
+.PHONY : FileUtil.cc.o
+
+FileUtil.i: FileUtil.cc.i
+
 .PHONY : FileUtil.i
 
-# target to generate assembly for a file
-FileUtil.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/FileUtil.s
+# target to preprocess a source file
+FileUtil.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/FileUtil.cc.i
+.PHONY : FileUtil.cc.i
+
+FileUtil.s: FileUtil.cc.s
+
 .PHONY : FileUtil.s
 
-# target to build an object file
-LogFile.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogFile.o
+# target to generate assembly for a file
+FileUtil.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/FileUtil.cc.s
+.PHONY : FileUtil.cc.s
+
+LogFile.o: LogFile.cc.o
+
 .PHONY : LogFile.o
 
-# target to preprocess a source file
-LogFile.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogFile.i
+# target to build an object file
+LogFile.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogFile.cc.o
+.PHONY : LogFile.cc.o
+
+LogFile.i: LogFile.cc.i
+
 .PHONY : LogFile.i
 
-# target to generate assembly for a file
-LogFile.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogFile.s
+# target to preprocess a source file
+LogFile.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogFile.cc.i
+.PHONY : LogFile.cc.i
+
+LogFile.s: LogFile.cc.s
+
 .PHONY : LogFile.s
 
-# target to build an object file
-LogStream.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogStream.o
+# target to generate assembly for a file
+LogFile.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogFile.cc.s
+.PHONY : LogFile.cc.s
+
+LogStream.o: LogStream.cc.o
+
 .PHONY : LogStream.o
 
-# target to preprocess a source file
-LogStream.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogStream.i
+# target to build an object file
+LogStream.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogStream.cc.o
+.PHONY : LogStream.cc.o
+
+LogStream.i: LogStream.cc.i
+
 .PHONY : LogStream.i
 
-# target to generate assembly for a file
-LogStream.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogStream.s
+# target to preprocess a source file
+LogStream.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogStream.cc.i
+.PHONY : LogStream.cc.i
+
+LogStream.s: LogStream.cc.s
+
 .PHONY : LogStream.s
 
-# target to build an object file
-Logging.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Logging.o
+# target to generate assembly for a file
+LogStream.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/LogStream.cc.s
+.PHONY : LogStream.cc.s
+
+Logging.o: Logging.cc.o
+
 .PHONY : Logging.o
 
-# target to preprocess a source file
-Logging.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Logging.i
+# target to build an object file
+Logging.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Logging.cc.o
+.PHONY : Logging.cc.o
+
+Logging.i: Logging.cc.i
+
 .PHONY : Logging.i
 
-# target to generate assembly for a file
-Logging.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Logging.s
+# target to preprocess a source file
+Logging.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Logging.cc.i
+.PHONY : Logging.cc.i
+
+Logging.s: Logging.cc.s
+
 .PHONY : Logging.s
 
-# target to build an object file
-ProcessInfo.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ProcessInfo.o
+# target to generate assembly for a file
+Logging.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Logging.cc.s
+.PHONY : Logging.cc.s
+
+ProcessInfo.o: ProcessInfo.cc.o
+
 .PHONY : ProcessInfo.o
 
-# target to preprocess a source file
-ProcessInfo.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ProcessInfo.i
+# target to build an object file
+ProcessInfo.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ProcessInfo.cc.o
+.PHONY : ProcessInfo.cc.o
+
+ProcessInfo.i: ProcessInfo.cc.i
+
 .PHONY : ProcessInfo.i
 
-# target to generate assembly for a file
-ProcessInfo.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ProcessInfo.s
+# target to preprocess a source file
+ProcessInfo.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ProcessInfo.cc.i
+.PHONY : ProcessInfo.cc.i
+
+ProcessInfo.s: ProcessInfo.cc.s
+
 .PHONY : ProcessInfo.s
 
-# target to build an object file
-Thread.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Thread.o
+# target to generate assembly for a file
+ProcessInfo.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ProcessInfo.cc.s
+.PHONY : ProcessInfo.cc.s
+
+Thread.o: Thread.cc.o
+
 .PHONY : Thread.o
 
-# target to preprocess a source file
-Thread.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Thread.i
+# target to build an object file
+Thread.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Thread.cc.o
+.PHONY : Thread.cc.o
+
+Thread.i: Thread.cc.i
+
 .PHONY : Thread.i
 
-# target to generate assembly for a file
-Thread.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Thread.s
+# target to preprocess a source file
+Thread.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Thread.cc.i
+.PHONY : Thread.cc.i
+
+Thread.s: Thread.cc.s
+
 .PHONY : Thread.s
 
-# target to build an object file
-ThreadPool.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ThreadPool.o
+# target to generate assembly for a file
+Thread.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Thread.cc.s
+.PHONY : Thread.cc.s
+
+ThreadPool.o: ThreadPool.cc.o
+
 .PHONY : ThreadPool.o
 
-# target to preprocess a source file
-ThreadPool.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ThreadPool.i
+# target to build an object file
+ThreadPool.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ThreadPool.cc.o
+.PHONY : ThreadPool.cc.o
+
+ThreadPool.i: ThreadPool.cc.i
+
 .PHONY : ThreadPool.i
 
-# target to generate assembly for a file
-ThreadPool.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ThreadPool.s
+# target to preprocess a source file
+ThreadPool.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ThreadPool.cc.i
+.PHONY : ThreadPool.cc.i
+
+ThreadPool.s: ThreadPool.cc.s
+
 .PHONY : ThreadPool.s
 
-# target to build an object file
-TimeZone.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/TimeZone.o
+# target to generate assembly for a file
+ThreadPool.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/ThreadPool.cc.s
+.PHONY : ThreadPool.cc.s
+
+TimeZone.o: TimeZone.cc.o
+
 .PHONY : TimeZone.o
 
-# target to preprocess a source file
-TimeZone.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/TimeZone.i
+# target to build an object file
+TimeZone.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/TimeZone.cc.o
+.PHONY : TimeZone.cc.o
+
+TimeZone.i: TimeZone.cc.i
+
 .PHONY : TimeZone.i
 
-# target to generate assembly for a file
-TimeZone.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/TimeZone.s
+# target to preprocess a source file
+TimeZone.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/TimeZone.cc.i
+.PHONY : TimeZone.cc.i
+
+TimeZone.s: TimeZone.cc.s
+
 .PHONY : TimeZone.s
 
-# target to build an object file
-Timestamp.o:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Timestamp.o
+# target to generate assembly for a file
+TimeZone.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/TimeZone.cc.s
+.PHONY : TimeZone.cc.s
+
+Timestamp.o: Timestamp.cc.o
+
 .PHONY : Timestamp.o
 
-# target to preprocess a source file
-Timestamp.i:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Timestamp.i
+# target to build an object file
+Timestamp.cc.o:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Timestamp.cc.o
+.PHONY : Timestamp.cc.o
+
+Timestamp.i: Timestamp.cc.i
+
 .PHONY : Timestamp.i
 
-# target to generate assembly for a file
-Timestamp.s:
-	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Timestamp.s
+# target to preprocess a source file
+Timestamp.cc.i:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Timestamp.cc.i
+.PHONY : Timestamp.cc.i
+
+Timestamp.s: Timestamp.cc.s
+
 .PHONY : Timestamp.s
+
+# target to generate assembly for a file
+Timestamp.cc.s:
+	$(MAKE) -f CMakeFiles/muduo_base.dir/build.make CMakeFiles/muduo_base.dir/Timestamp.cc.s
+.PHONY : Timestamp.cc.s
 
 # Help Target
 help:

@@ -1,9 +1,14 @@
+// Use of this source code is governed by a BSD-style license
+// that can be found in the License file.
+//
+// Author: Shuo Chen (chenshuo at chenshuo dot com)
+
 #ifndef MUDUO_BASE_THREAD_H
 #define MUDUO_BASE_THREAD_H
 
+#include "Atomic.h"
 #include "CountDownLatch.h"
 #include "Types.h"
-#include "Atomic.h"
 
 #include <functional>
 #include <memory>
@@ -11,47 +16,39 @@
 
 namespace muduo
 {
-    class Thread : noncopyable
-    {
-         public:
-            typedef std::function<void()> Threadfunc;
 
-            explicit Thread(Threadfunc , const string& name = string());
-            ~Thread();
-            
-            void start();
-            int join();  //return pthread_join()
+class Thread : noncopyable
+{
+ public:
+  typedef std::function<void ()> ThreadFunc;
 
-            bool started() const 
-            {
-                return started_;
-            }
-            pid_t tid() const
-            {
-                return tid_;
-            }
+  explicit Thread(ThreadFunc, const string& name = string());
+  // FIXME: make it movable in C++11
+  ~Thread();
 
-            const string& name() const
-            {
-                return name_;
-            }
-            // static int numCreated()
-            // {
-            //     return numCreated_.get();
-            // }
+  void start();
+  int join(); // return pthread_join()
 
-        private:
-            void           setDefaultName();
-            bool           started_;
-            pid_t          tid_;
-            string         name_;
-            //static         AtomicInt32 numCreated_;
-            bool           joined_;
-            pthread_t      pthreadId_;
-            Threadfunc     func_;
-            CountDownLatch latch_;
+  bool started() const { return started_; }
+  // pthread_t pthreadId() const { return pthreadId_; }
+  pid_t tid() const { return tid_; }
+  const string& name() const { return name_; }
 
-    };
-}
+  static int numCreated() { return numCreated_.get(); }
 
-#endif
+ private:
+  void setDefaultName();
+
+  bool       started_;
+  bool       joined_;
+  pthread_t  pthreadId_;
+  pid_t      tid_;
+  ThreadFunc func_;
+  string     name_;
+  CountDownLatch latch_;
+
+  static AtomicInt32 numCreated_;
+};
+
+}  // namespace muduo
+#endif  // MUDUO_BASE_THREAD_H
